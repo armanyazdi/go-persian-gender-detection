@@ -3,6 +3,7 @@ package persiangenderdetection
 import (
 	"bufio"
 	"os"
+	"path/filepath"
 	"strings"
 	"sync"
 	"unicode"
@@ -16,7 +17,12 @@ var (
 // readCSV reads the CSV file and populates the dataset map
 // This function is called only once using sync.Once
 func readCSV() {
-	file, err := os.Open("data/names.csv")
+	absPath, err := filepath.Abs("data/names.csv")
+	if err != nil {
+		panic(err)
+	}
+
+	file, err := os.Open(absPath)
 	if err != nil {
 		panic(err)
 	}
