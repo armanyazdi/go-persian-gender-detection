@@ -2,33 +2,23 @@ package persiangenderdetection
 
 import (
 	"bufio"
-	"os"
-	"path/filepath"
+	_ "embed"
 	"strings"
 	"sync"
 	"unicode"
 )
+
+//go:embed data/names.csv
+var namesCSV string
 
 var (
 	dataset     = make(map[string]string)
 	datasetOnce sync.Once
 )
 
-// readCSV reads the CSV file and populates the dataset map
-// This function is called only once using sync.Once
+// readCSV reads the embedded CSV data and populates the dataset map
 func readCSV() {
-	absPath, err := filepath.Abs("data/names.csv")
-	if err != nil {
-		panic(err)
-	}
-
-	file, err := os.Open(absPath)
-	if err != nil {
-		panic(err)
-	}
-	defer file.Close()
-
-	scanner := bufio.NewScanner(file)
+	scanner := bufio.NewScanner(strings.NewReader(namesCSV))
 	for scanner.Scan() {
 		line := scanner.Text()
 		record := strings.Split(line, ",")
@@ -74,8 +64,7 @@ func clearName(name string) string {
 func GetGender(name string) string {
 	datasetOnce.Do(readCSV)
 
-	clearedName := clearName(name)
-	fullName := strings.Fields(clearedName)
+	fullName := strings.Fields(clearName(name))
 	prefixes := map[string]struct{}{
 		"سید":   {},
 		"سیده":  {},
