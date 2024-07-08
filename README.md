@@ -10,13 +10,16 @@ A Go package for detecting gender by Persian and Arabic names (with more than 23
 
 Let's take a look at what an example test case would look like using `persian-gender-detection`.
 
-### Detect Gender:
+### Gender Detection:
+
+First of all, import the package.
 
 ```go
 import
 genderdetector "github.com/armanyazdi/persian-gender-detection-go"
 )
 ```
+Detect gender by Persian and Arabic names.
 
 ```go
 genderdetector.GetGender("  عــــلی  ")    // MALE
@@ -46,6 +49,7 @@ Feel free to contribute names database with your kindly pull requests.
 ## TODO
 
 - [ ] Add Finglish support
+- [ ] Add more names
 
 ## License
 
