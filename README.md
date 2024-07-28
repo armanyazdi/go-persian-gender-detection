@@ -4,7 +4,7 @@ A Go package for detecting gender by Persian and Arabic names (with more than 23
 
 ## Installation
 
-`go get -u github.com/armanyazdi/persian-gender-detection-go`
+`go get -u github.com/armanyazdi/go-persian-gender-detection`
 
 ## Usage
 
@@ -16,7 +16,7 @@ First of all, import the package.
 
 ```go
 import
-genderdetector "github.com/armanyazdi/persian-gender-detection-go"
+genderdetector "github.com/armanyazdi/go-persian-gender-detection"
 )
 ```
 Detect gender by Persian and Arabic names.
@@ -53,4 +53,4 @@ Feel free to contribute names database with your kindly pull requests.
 
 ## License
 
-`persian-gender-detection` is available under the [MIT license](https://github.com/armanyazdi/persian-gender-detection-go/blob/master/LICENSE).
+`persian-gender-detection` is available under the [MIT license](https://github.com/armanyazdi/go-persian-gender-detection/blob/master/LICENSE).
