@@ -1,3 +1,3 @@
-module github.com/armanyazdi/persian-gender-detection-go
+module github.com/armanyazdi/go-persian-gender-detection
 
 go 1.22
