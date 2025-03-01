@@ -1,5 +1,10 @@
 # Persian Gender Detection
 
+[![GitHub Release](https://img.shields.io/github/v/release/armanyazdi/go-persian-gender-detection?style=for-the-badge)](https://pypi.org/project/persian-names)
+[![Static Badge](https://img.shields.io/badge/reference-%23027d9c?style=for-the-badge&logo=go&logoColor=white&labelColor=%23555555)](https://pkg.go.dev/github.com/armanyazdi/go-persian-gender-detection?tab=doc)
+[![GitHub](https://img.shields.io/github/license/armanyazdi/go-persian-gender-detection?style=for-the-badge)](https://github.com/armanyazdi/go-persian-gender-detection)
+
+
 A Go package for detecting gender by Persian and Arabic names (with more than 23K names).
 
 ## Installation
